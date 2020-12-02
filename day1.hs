@@ -8,6 +8,4 @@ problem1 = readFile "day1.txt" >>= (putStrLn . show . (\(x,y) -> x*y) . head . (
 
 problem2 = readFile "day1.txt" >>= (putStrLn . show . (\(x,y,z) -> x*y*z) . head . (prodTrips 2020) . (map read) . lines)
 
-main = do
-    problem1
-    problem2
+main = problem1 >> problem2
